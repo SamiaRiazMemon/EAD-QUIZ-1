@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskMaster - Task Management Web App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to TaskMaster</h1>
+      <p>A Task Management Application you can rely on</p>
+    </header>
+
+    <main>
+      <section class="create-task">
+        <h2>Create a Task</h2>
+        <form id="task-form">
+          <div class="form-group">
+            <label for="taskName">Task Name</label>
+            <input type="text" id="taskName" required />
+          </div>
+          <div class="form-group">
+            <label for="dueDate">Due Date</label>
+            <input type="date" id="dueDate" required />
+          </div>
+          <div class="form-group">
+            <label for="assignee">Assign to</label>
+            <select id="assignee" required>
+              <option value="" disabled selected>Select a team member</option>
+              <option>Samia</option>
+              <option>Laiba</option>
+              <option>Maheera</option>
+              <option>Fariha</option>
+              <option>Kashish</option>
+              <option>Annaya</option>
+            </select>
+          </div>
+          <button type="Submit">Create Task</button>
+        </form>
+      </section>
+
+      <section class="task-list">
+        <h2>Task List</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Task Name</th>
+              <th>Due Date</th>
+              <th>Assignee</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="task-list-body">
+            <!-- Task rows will be added here dynamically -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
